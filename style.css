@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    transition: 0.3s cubic-bezier(0.6, 0, 0.2, 1);
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    transition: 0s;
+    background-color: #BBC;
+}
+
+.container{
+    width: 100%;
+}
+
+.title{
+    width: 100%;
+    margin-top: 5%;
+}
+
+.tetris-title{
+    margin-bottom: 10%;
+}
+
+.canvas-container{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 720px;
+    width: 720px};
+    
+#cnv{
+    height: 100%;
+    width: 100%;}
+    
+    @media screen and (max-height: 800px) {
+        .canvas-container {
+            transform: translate(-50%, -50%) scale(0.8);
+        }
+    }
+    
+    @media screen and (max-width: 900px) {
+        .canvas-container {
+            transform: translate(-50%, -50%) scale(0.7);
+        }
+    }
+
+    .audio-btn{
+        font-size: 200%;
+    }
+    
+    body {
+        /* Set the background color */
+        /* background-color: lightblue; */
+    
+        /* Set the background image */
+        background-image: url("images/0.png"); /* Replace with the path to your image */
+        background-size: cover;
+        background-repeat: no-repeat;
+    }

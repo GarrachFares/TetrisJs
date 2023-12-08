@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page not found</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container d-flex justify-content-center">
+        <div class="center">
+         <div class="title text-center">
+             <h1 style="color: rgb(0, 128, 255);">404 - Page Non Trouvée !</h1>
+         </div>
+         <div class="tetris-title">
+             <h5>Au moins, vous avez trouvé un jeu, sauvez l'envirennement !</h5>
+         </div>
+        </div>
+     </div>
+    <div class="canvas-container">
+
+        <canvas id="cnv" height="600px" width="600px"></canvas>
+        <div class="audio">
+            <audio id="audioPlayer" src="sons/tet.mp3" preload="auto"></audio>
+            <button class="audio-btn" onclick="toggleAudio()">▶️</button>
+        </div>
+    </div>
+  
+
+    <script>
+        // Get the audio element by its ID
+        var audioPlayer = document.getElementById('audioPlayer');
+    
+        // Function to toggle between play and pause
+        function toggleAudio() {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                document.querySelector('button').innerText = '🔊';
+            } else {
+                audioPlayer.pause();
+                document.querySelector('button').innerText = '🔇';
+                
+            }
+        }
+    </script>
+
+<script src="tetris.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
